@@ -1,0 +1,250 @@
+/* Base Styles */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #F7F9FC;
+    /* Neutral light blue for background */
+    margin: 0;
+    padding: 0;
+    color: #2E3A59;
+    /* Neutral dark blue for text */
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 700;
+    color: #1C2533;
+    /* Deep dark blue for headings */
+    margin-bottom: 10px;
+}
+
+p {
+    font-weight: 300;
+    color: #2E3A59;
+    /* Dark neutral for text visibility */
+    margin-bottom: 20px;
+}
+
+
+/* Header Section */
+
+header {
+    background: linear-gradient(to bottom, rgba(28, 37, 51, 0.9), rgba(46, 58, 89, 0.9)), url('header-background.jpg') center/cover no-repeat;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+}
+
+header h1 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    color: #FFC107;
+    /* Gold for highlight */
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #FFFFFF;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #FFC107;
+}
+
+
+/* About Section */
+
+#about {
+    padding: 60px 20px;
+    text-align: center;
+    background: #FFFFFF;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+}
+
+.about-content p {
+    max-width: 600px;
+    text-align: justify;
+    font-size: 1rem;
+    color: #4A5568;
+}
+
+
+/* Projects Section */
+
+#projects {
+    padding: 60px 20px;
+    background: #F1F5FB;
+    /* Neutral soft blue */
+    text-align: center;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background: #FFFFFF;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-card h3 {
+    color: #2E3A59;
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    font-size: 0.95rem;
+    color: #4A5568;
+}
+
+
+/* Contact Section */
+
+#contact {
+    padding: 50px 20px;
+    background: #FFFFFF;
+    text-align: center;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.contact-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 25px;
+    background: #3182CE;
+    /* Vibrant blue for buttons */
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.contact-btn i {
+    font-size: 1.2rem;
+}
+
+.contact-btn:hover {
+    background: #2B6CB0;
+    /* Darker blue on hover */
+}
+
+
+/* Footer Section */
+
+footer {
+    background: #2E3A59;
+    /* Neutral dark blue */
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
+
+
+/* Smooth Scrolling */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Animations */
+
+.fade-in {
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.project-card {
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #2980B9;
+    /* Vibrant blue for links */
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.project-link:hover {
+    color: #1A5276;
+    /* Darker blue on hover */
+}
